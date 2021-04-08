@@ -167,8 +167,8 @@ CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000'
 ]
 
-django_heroku.settings(locals())
-
 # Add these at the very last line of settings.py
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
+
+django_heroku.settings(locals())
